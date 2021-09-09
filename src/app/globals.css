@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'Poppins';
-  src: url('assets/font/Poppins-Regular.ttf');
+  font-family: 'Arial-Rounded-MT-Bold';
+  src: url('assets/font/Arial-Rounded-MT-Bold.ttf');
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('assets/font/Poppins-Bold.ttf');
+  font-family: 'Arial-Rounded-MT-Bold';
+  src: url('assets/font/Arial-Rounded-MT-Bold.ttf');
   font-weight: 800;
 }
 
@@ -17,14 +17,13 @@
 }
 
 :root {
-  --bg-primary: #111;
-  --bg-secondary: #424242;
-  --color-primary: #ffc700;
-  --color-secondary: #2a2a2a;
+  --bg-primary: #9e9e9e;
+  --bg-secondary: #252a2e;
+  --color-primary: #000;
+  --color-secondary: #03bef9;
   --text-primary: #fff;
-  --text-secondary: #888;
-  --font-face: 'Poppins', sans-serif;
-  --bg-dark: #0b0b0b;
+  --text-secondary: #ff5c00;
+  --font-face: 'Arial-Rounded-MT-Bold', sans-serif;
 }
 
 body {
