@@ -6,16 +6,4 @@ dist-ssr
 .vscode
 .eslintcache
 .env
-src/app/components/AddButton
-src/app/components/BackButton
-src/app/components/BurgerButton
-src/app/components/CheckedCard
-src/app/components/ChoiceCard
-src/app/components/DeleteButton
-src/app/components/EditButton
-src/app/components/ForwardButton
-src/app/components/Header
-src/app/components/HomeButton
-src/app/components/MailButton
-src/app/components/Navigation
-src/app/components/QuestionCard
+src/app/components/.gitignore
