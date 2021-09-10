@@ -6,3 +6,4 @@ dist-ssr
 .vscode
 .eslintcache
 .env
+src/app/components/.gitignore
