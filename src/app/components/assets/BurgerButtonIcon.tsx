@@ -12,10 +12,7 @@ export default function BurgerButtonIcon(
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path
-        d="M0 0H21.875V4.6875H0V0ZM0 6.25H21.875V10.9375H0V6.25ZM0 12.5H21.875V17.1875H0V12.5Z"
-        fill="white"
-      />
+      <path d="M0 0H21.875V4.6875H0V0ZM0 6.25H21.875V10.9375H0V6.25ZM0 12.5H21.875V17.1875H0V12.5Z" />
     </svg>
   );
 }
