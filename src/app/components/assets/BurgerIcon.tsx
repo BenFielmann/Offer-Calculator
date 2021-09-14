@@ -8,7 +8,7 @@ export default function BurgerIcon(
       width="22"
       height="18"
       viewBox="0 0 22 18"
-      fill="none"
+      fill="white"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
