@@ -8,7 +8,7 @@ export default function CheckIcon(
       width="30"
       height="25"
       viewBox="0 0 30 25"
-      fill="#33FF00"
+      fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
