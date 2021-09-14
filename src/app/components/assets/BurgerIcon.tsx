@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function BurgerButtonIcon(
+export default function BurgerIcon(
   props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
   return (

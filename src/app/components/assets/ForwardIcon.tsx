@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ForwardButtonIcon(
+export default function ForwardIcon(
   props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
   return (

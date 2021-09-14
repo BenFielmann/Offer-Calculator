@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function EditButtonIcon(
+export default function EditIcon(
   props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
   return (
