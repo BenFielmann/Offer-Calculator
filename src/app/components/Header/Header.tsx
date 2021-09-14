@@ -1,9 +1,9 @@
 import React from 'react';
-import BurgerButtonIcon from '../assets/BurgerButtonIcon';
+import BurgerIcon from '../assets/BurgerIcon';
 import styles from './Header.module.css';
 
 export type Headerprops = {
-  activeLink: 'burgerActive' | 'burgerInactive';
+  activeLink: boolean;
   onClick: () => void;
 };
 
@@ -17,14 +17,14 @@ function Header({ activeLink, onClick }: Headerprops): JSX.Element {
   };
 
   return (
-    <nav className={`${styles.header}`}>
-      <BurgerButtonIcon
+    <header className={`${styles.header}`}>
+      <BurgerIcon
         onClick={onClick}
         className={styles.burgerIcon}
-        {...(activeLink === 'burgerActive' ? active : inactive)}
+        {...(activeLink === true ? active : inactive)}
       />
       <h1 className={styles.heading}> ANGEBOTS RECHNER </h1>
-    </nav>
+    </header>
   );
 }
 
