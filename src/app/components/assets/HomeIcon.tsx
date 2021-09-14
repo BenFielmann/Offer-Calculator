@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function HomeButtonIcon(
+export default function HomeIcon(
   props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
   return (
