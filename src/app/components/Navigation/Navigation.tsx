@@ -1,7 +1,7 @@
 import React from 'react';
-import BackButtonIcon from '../assets/BackButtonIcon';
-import HomeButtonIcon from '../assets/HomeButtonIcon';
-import ForwardButtonIcon from '../assets/ForwardButtonIcon';
+import BackButtonIcon from '../assets/BackIcon';
+import HomeButtonIcon from '../assets/HomeIcon';
+import ForwardButtonIcon from '../assets/ForwardIcon';
 import styles from './Navigation.module.css';
 import { Link } from 'react-router-dom';
 

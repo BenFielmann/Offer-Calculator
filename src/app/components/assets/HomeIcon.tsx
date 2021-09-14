@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HomeButtonIcon = (props: React.SVGProps<SVGSVGElement>): JSX.Element => {
+const HomeIcon = (props: React.SVGProps<SVGSVGElement>): JSX.Element => {
   return (
     <svg
       width="20"
@@ -15,4 +15,4 @@ const HomeButtonIcon = (props: React.SVGProps<SVGSVGElement>): JSX.Element => {
   );
 };
 
-export default HomeButtonIcon;
+export default HomeIcon;

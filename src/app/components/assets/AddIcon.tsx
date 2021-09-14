@@ -13,10 +13,9 @@ export default function AddButtonIcon(
       {...props}
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z"
-        fill="#03BEF9"
       />
     </svg>
   );
