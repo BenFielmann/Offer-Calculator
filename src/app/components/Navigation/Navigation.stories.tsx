@@ -6,23 +6,19 @@ export default {
   component: Navigation,
 };
 
-export const BackActive = (): JSX.Element => (
-  <Navigation isHomeActive='clickableStyle' />
-);
+export const BackActive = (): JSX.Element => <Navigation isFirstStep={false} />;
 export const BackInactive = (): JSX.Element => (
-  <Navigation activeLink="backInactive" />
+  <Navigation isFirstStep={true} />
 );
 
-export const HomeActive = (): JSX.Element => (
-  <Navigation activeLink="homeActive" />
-);
-export const HomeInactive = (): JSX.Element => (
-  <Navigation activeLink="homeInactive" />
+export const HomeActive = (): JSX.Element => <Navigation isHomeActive={true} />;
+export const HomeUsable = (): JSX.Element => (
+  <Navigation isHomeActive={false} />
 );
 
-export const ForwardActive = (): JSX.Element => (
-  <Navigation activeLink="forwardActive" />
+export const ForwardAction = (): JSX.Element => (
+  <Navigation callToAction={true} />
 );
 export const ForwardInactive = (): JSX.Element => (
-  <Navigation activeLink="forwardInactive" />
+  <Navigation callToAction={false} />
 );

@@ -1,7 +1,7 @@
 import React from 'react';
-import BackButtonIcon from '../assets/BackIcon';
-import HomeButtonIcon from '../assets/HomeIcon';
-import ForwardButtonIcon from '../assets/ForwardIcon';
+import BackIcon from '../assets/BackIcon';
+import HomeIcon from '../assets/HomeIcon';
+import ForwardIcon from '../assets/ForwardIcon';
 import styles from './Navigation.module.css';
 import { Link } from 'react-router-dom';
 
@@ -35,19 +35,19 @@ function Navigation({
   return (
     <nav className={`${styles.navigation}`}>
       <Link to="/back">
-        <BackButtonIcon
+        <BackIcon
           className={styles.navigationIcons}
           {...(isFirstStep ? disabledStyle : clickableStyle)}
         />
       </Link>
       <Link to="/home">
-        <HomeButtonIcon
+        <HomeIcon
           className={styles.navigationIcons}
           {...(isHomeActive ? homeActiveStyle : clickableStyle)}
         />
       </Link>
       <Link to="/forward">
-        <ForwardButtonIcon
+        <ForwardIcon
           className={styles.navigationIcons}
           {...(callToAction ? callToActionStyle : disabledStyle)}
         />
