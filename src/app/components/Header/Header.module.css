@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  width: 100%;
+  background: linear-gradient(113deg, #252a2e 38.08%, #000 80.65%);
+  border-radius: 20px 20px 0 0;
+  color: var(--text-primary);
+  padding: 1rem;
+  align-items: center;
+}
+
+.heading {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+
+.burgerIcon {
+  width: 20px;
+  height: 20px;
+}
