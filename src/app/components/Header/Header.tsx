@@ -2,12 +2,12 @@ import React from 'react';
 import BurgerIcon from '../assets/BurgerIcon';
 import styles from './Header.module.css';
 
-export type Headerprops = {
-  activeLink: boolean;
+export type BurgerIconprops = {
+  activeButton: boolean;
   onClick: () => void;
 };
 
-function Header({ activeLink, onClick }: Headerprops): JSX.Element {
+function Header({ activeButton, onClick }: BurgerIconprops): JSX.Element {
   const active = {
     fill: 'var(--text-primary)',
   };
@@ -21,7 +21,7 @@ function Header({ activeLink, onClick }: Headerprops): JSX.Element {
       <BurgerIcon
         onClick={onClick}
         className={styles.burgerIcon}
-        {...(activeLink === true ? active : inactive)}
+        {...(activeButton === true ? active : inactive)}
       />
       <h1 className={styles.heading}> ANGEBOTS RECHNER </h1>
     </header>
