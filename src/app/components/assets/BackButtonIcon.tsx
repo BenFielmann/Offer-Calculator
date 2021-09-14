@@ -12,10 +12,7 @@ export default function BackButtonIcon(
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path
-        d="M12.931 0V6.03448H25V19.8276H12.931V25.8621L0 12.931L12.931 0Z"
-        fill="white"
-      />
+      <path d="M12.931 0V6.03448H25V19.8276H12.931V25.8621L0 12.931L12.931 0Z" />
     </svg>
   );
 }
