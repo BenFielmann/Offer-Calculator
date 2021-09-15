@@ -3,9 +3,9 @@ import { Menu, MenuItem, MenuButton } from '@szhsin/react-menu';
 import BurgerIcon from '../assets/BurgerIcon';
 import '@szhsin/react-menu/dist/index.css';
 import './CustomReactMenu.css';
-import styles from './PopMenu.module.css';
+import styles from './DropdownMenu.module.css';
 
-export default function Example(): JSX.Element {
+export default function DropdownMenu(): JSX.Element {
   return (
     <Menu
       menuButton={
