@@ -1,0 +1,28 @@
+.szh-menu-container {
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+.szh-menu {
+  border-radius: 20px;
+  border-top-left-radius: 0;
+  margin: 0;
+  padding: 0;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  list-style: none;
+  box-sizing: border-box;
+  width: max-content;
+  position: absolute;
+  z-index: 100;
+  border: 1px solid rgb(0, 0, 0);
+  background: linear-gradient(91.01deg, #252a2e 24.86%, #6e6e6e 164.07%);
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+.szh-menu__item--hover {
+  background-color: var(--bg-secondary);
+  border-radius: 20px;
+}
