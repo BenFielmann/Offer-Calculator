@@ -5,8 +5,8 @@ export default function CheckIcon(
 ): JSX.Element {
   return (
     <svg
-      width="30"
-      height="25"
+      width="18"
+      height="14"
       viewBox="0 0 30 25"
       fill="#33FF00"
       xmlns="http://www.w3.org/2000/svg"
