@@ -8,9 +8,10 @@ import classes from './Button.module.css';
 
 type ButtonProps = {
   type: 'add' | 'burger' | 'delete' | 'edit' | 'mail';
+  className?: string;
 };
 
-function Button({ type }: ButtonProps): JSX.Element {
+function Button({ type, className }: ButtonProps): JSX.Element {
   const icons = {
     add: <AddIcon />,
     burger: <BurgerIcon />,
@@ -19,7 +20,9 @@ function Button({ type }: ButtonProps): JSX.Element {
     mail: <MailIcon />,
   };
 
-  return <button className={classes.button}>{icons[type]}</button>;
+  return (
+    <button className={`${classes.button} ${className}`}>{icons[type]}</button>
+  );
 }
 
 export default Button;

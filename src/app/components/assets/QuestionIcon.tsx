@@ -5,8 +5,8 @@ export default function QuestionIcon(
 ): JSX.Element {
   return (
     <svg
-      width="9"
-      height="14"
+      width="12"
+      height="16"
       viewBox="0 0 9 14"
       fill="#FF5C00"
       xmlns="http://www.w3.org/2000/svg"
