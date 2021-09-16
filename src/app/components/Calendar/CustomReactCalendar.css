@@ -1,0 +1,161 @@
+/* Calendar main box */
+.react-calendar {
+  width: 100%;
+  max-width: 100%;
+  background: var(--gradient-dark);
+  border: none;
+}
+
+/* Class for removing the dotted-underline */
+abbr[title] {
+  text-decoration: none;
+}
+
+/* Adapt Nav Bar // Is there a way to overwrite the inline style of the navigation that sets display=flex to grid, other that using !important? */
+.react-calendar__navigation {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: space-between;
+}
+
+/* Month */
+.react-calendar__navigation__label__labelText--from {
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+/* Arrow to next month */
+.react-calendar__navigation__next-button {
+  color: var(--color-secondary);
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+/* Arrow to previous month */
+.react-calendar__navigation__prev-button {
+  color: var(--color-secondary);
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+/* Remove arrow to same month, previous year / next year */
+.react-calendar__navigation__next2-button {
+  color: black;
+  padding: 0;
+  justify-content: space-around;
+  justify-self: flex-end;
+  font-size: 2.5rem;
+}
+
+.react-calendar__navigation__prev2-button {
+  color: black;
+  padding: 0;
+  justify-content: space-around;
+  justify-self: flex-start;
+  font-size: 2.5rem;
+}
+
+/* ----------------------------------------------------- */
+
+/* Mo-So */
+.react-calendar__month-view__weekdays {
+  font-family: var(--font-face);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  text-align: center;
+  text-transform: none;
+}
+
+/* Numbers in the calendar, of the respective month */
+.react-calendar__month-view__days__day {
+  font-family: var(--font-face);
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+/* Numbers in the calendar, of the previous and next month */
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: var(--text-secondary);
+}
+
+/* Single tile where the numbers are inside */
+.react-calendar__tile {
+  padding: 0.75rem;
+}
+
+/* Tile now: today's tile if not clicked */
+.react-calendar__tile--now {
+  background: var(--color-secondary);
+  border-radius: 20%;
+}
+
+/* Tile active: the tile that was clicked */
+.react-calendar__tile--active {
+  background: var(--bg-primary);
+  border-radius: 20%;
+}
+
+/* Year overview with months */
+.react-calendar__year-view__months__month {
+  font-family: var(--font-face);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+}
+
+/* Decade overview with years */
+.react-calendar__decade-view__years__year {
+  font-family: var(--font-face);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+}
+
+/* Century overview with decades */
+.react-calendar__century-view__decades__decade {
+  font-family: var(--font-face);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+}
+
+/* ------------------------ Hover effect´s ------------------------ */
+
+.react-calendar button:enabled:hover {
+  cursor: pointer;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: var(--bg-primary);
+  border-radius: 10%;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: var(--bg-primary);
+  border-radius: 10%;
+}
+
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background-color: var(--bg-primary);
+  border-radius: 10%;
+}
+
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+  background-color: var(--bg-primary);
+  border-radius: 10%;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background-color: var(--bg-primary);
+  border-radius: 10%;
+}
+
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: var(--bg-primary);
+  border-radius: 10%;
+}
+
+/* -------------------------------------------------------------- */
