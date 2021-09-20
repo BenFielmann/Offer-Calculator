@@ -6,7 +6,7 @@
 }
 
 .textInput,
-.textInputOutput {
+.InputOutput {
   width: 100%;
   background-color: transparent;
   color: var(--color-primary);
@@ -14,19 +14,13 @@
   border: none;
   font-family: var(--font-face);
   font-size: 1rem;
-  line-height: 2rem;
-  margin: 0 0 0 1rem;
+  line-height: 1.5rem;
+  margin: 1rem 0 0 1rem;
+  padding: 0;
 }
 
 .textInput::placeholder {
   color: var(--bg-primary);
-}
-
-.inputWrapper {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  display: grid;
-  gap: 1rem;
 }
 
 .icon {
@@ -39,5 +33,4 @@
   margin: 0 1rem 1rem 1rem;
   display: flex;
   justify-content: space-between;
-  text-decoration: none;
 }
