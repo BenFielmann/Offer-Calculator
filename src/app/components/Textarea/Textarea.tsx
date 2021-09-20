@@ -67,6 +67,7 @@ export default function Textarea({
   return (
     <section className={styles.main}>
       {isEditable &&
+      setIsEditable /*<- this is just for the nightly push in here looking forward to the review*/ &&
       setCompanyValue &&
       setCeoValue &&
       setPhoneNumberValue &&
@@ -78,7 +79,7 @@ export default function Textarea({
       setCityValue &&
       setManagerValue &&
       setManagerPhoneValue ? (
-        <div className={styles.inputWrapper}>
+        <>
           <input
             value={companyValue}
             onChange={(event) => setCompanyValue(event.target.value)}
@@ -156,21 +157,23 @@ export default function Textarea({
             type="tel"
             className={styles.textInput}
           />
-        </div>
+        </>
       ) : (
-        <div className={styles.textInputOutput}>
-          <p>Firma: {companyValue}</p>
-          <p>Geschäftsleitung: {ceoValue}</p>
-          <p>Tel/Fax: {phoneNumberValue}</p>
-          <p>Mobil: {mobileValue}</p>
-          <p>E-Mail: {emailValue}</p>
-          <p>Web: {urlValue}</p>
-          <p>Straße: {streetValue}</p>
-          <p>PLZ: {plzValue}</p>
-          <p>Stadt: {cityValue}</p>
-          <p>Leitender Angstellter: {managerValue}</p>
-          <p>Tel: {managerPhoneValue}</p>
-        </div>
+        <>
+          <p className={styles.InputOutput}>Firma: {companyValue}</p>
+          <p className={styles.InputOutput}>Geschäftsleitung: {ceoValue}</p>
+          <p className={styles.InputOutput}>Tel/Fax: {phoneNumberValue}</p>
+          <p className={styles.InputOutput}>Mobil: {mobileValue}</p>
+          <p className={styles.InputOutput}>E-Mail: {emailValue}</p>
+          <p className={styles.InputOutput}>Web: {urlValue}</p>
+          <p className={styles.InputOutput}>Straße: {streetValue}</p>
+          <p className={styles.InputOutput}>PLZ: {plzValue}</p>
+          <p className={styles.InputOutput}>Stadt: {cityValue}</p>
+          <p className={styles.InputOutput}>
+            Leitender Angstellter: {managerValue}
+          </p>
+          <p className={styles.InputOutput}>Tel: {managerPhoneValue}</p>
+        </>
       )}
       <div className={styles.buttongroup}>
         <Button type="edit" />
