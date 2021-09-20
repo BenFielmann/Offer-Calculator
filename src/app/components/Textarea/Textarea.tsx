@@ -78,7 +78,7 @@ export default function Textarea({
       setCityValue &&
       setManagerValue &&
       setManagerPhoneValue ? (
-        <>
+        <div className={styles.inputWrapper}>
           <input
             value={companyValue}
             onChange={(event) => setCompanyValue(event.target.value)}
@@ -156,9 +156,9 @@ export default function Textarea({
             type="tel"
             className={styles.textInput}
           />
-        </>
+        </div>
       ) : (
-        <div className={styles.textInput}>
+        <div className={styles.textInputOutput}>
           <p>Firma: {companyValue}</p>
           <p>Geschäftsleitung: {ceoValue}</p>
           <p>Tel/Fax: {phoneNumberValue}</p>

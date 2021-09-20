@@ -5,17 +5,28 @@
   background-color: var(--text-primary);
 }
 
-.textInput {
+.textInput,
+.textInputOutput {
   width: 100%;
   background-color: transparent;
   color: var(--color-primary);
   outline: none;
   border: none;
-  text-decoration: underline;
+  font-family: var(--font-face);
+  font-size: 1rem;
+  line-height: 2rem;
+  margin: 0 0 0 1rem;
 }
 
 .textInput::placeholder {
   color: var(--bg-primary);
+}
+
+.inputWrapper {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: grid;
+  gap: 1rem;
 }
 
 .icon {
