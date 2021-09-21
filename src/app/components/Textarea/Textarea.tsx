@@ -14,6 +14,7 @@ druch Click wechsel zu Profilansicht
 export type TextareaProps = {
   isEditable: boolean;
   setIsEditable: (value: boolean) => void;
+  onDeleteClick: () => void;
   companyValue: string;
   setCompanyValue?: (value: string) => void;
   ceoValue: string;
@@ -41,6 +42,7 @@ export type TextareaProps = {
 export default function Textarea({
   isEditable,
   setIsEditable,
+  onDeleteClick,
   companyValue,
   setCompanyValue,
   ceoValue,
@@ -67,7 +69,6 @@ export default function Textarea({
   return (
     <section className={styles.main}>
       {isEditable &&
-      setIsEditable /*<- this is just for the nightly push in here looking forward to the review*/ &&
       setCompanyValue &&
       setCeoValue &&
       setPhoneNumberValue &&
@@ -176,9 +177,9 @@ export default function Textarea({
         </>
       )}
       <div className={styles.buttongroup}>
-        <Button type="edit" />
+        <Button type="edit" onClick={() => setIsEditable(true)} />
         {!isEditable && <CheckIcon className={styles.icon}></CheckIcon>}
-        {!isEditable && <Button type="delete" />}
+        {!isEditable && <Button type="delete" onClick={onDeleteClick} />}
       </div>
     </section>
   );
