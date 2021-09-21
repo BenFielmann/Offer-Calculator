@@ -15,6 +15,7 @@ export const EditableTextArea = (): JSX.Element => (
   <Textarea
     isEditable={true}
     setIsEditable={console.log}
+    onDeleteClick={console.log}
     companyValue="Muster Firma"
     setCompanyValue={console.log}
     ceoValue=""
@@ -43,6 +44,7 @@ export const TextArea = (): JSX.Element => (
   <Textarea
     isEditable={false}
     setIsEditable={console.log}
+    onDeleteClick={console.log}
     companyValue="Muster Firma"
     ceoValue="Muster Mann"
     phoneNumberValue="0...."
