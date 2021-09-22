@@ -54,7 +54,7 @@ export const TextArea = (): JSX.Element => (
     streetValue="Muster Straße"
     plzValue="0...."
     cityValue="Muster Stadt"
-    managerValue="Muster Angestellter"
+    managerValue="Muster Frau"
     managerPhoneValue="0...."
   />
 );
