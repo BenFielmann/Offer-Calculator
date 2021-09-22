@@ -1,0 +1,36 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  background-color: var(--text-primary);
+}
+
+.textInput,
+.InputOutput {
+  width: 100%;
+  background-color: transparent;
+  color: var(--color-primary);
+  outline: none;
+  border: none;
+  font-family: var(--font-face);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 1rem 0 0 1rem;
+  padding: 0;
+}
+
+.textInput::placeholder {
+  color: var(--bg-primary);
+}
+
+.icon {
+  width: 25px;
+  height: 27px;
+  border: none;
+  background-color: transparent;
+}
+.buttongroup {
+  margin: 0 1rem 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+}

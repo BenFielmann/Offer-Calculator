@@ -9,9 +9,10 @@ import classes from './Button.module.css';
 type ButtonProps = {
   type: 'add' | 'burger' | 'delete' | 'edit' | 'mail';
   className?: string;
+  onClick?: () => void;
 };
 
-function Button({ type, className }: ButtonProps): JSX.Element {
+function Button({ type, className, onClick }: ButtonProps): JSX.Element {
   const icons = {
     add: <AddIcon />,
     burger: <BurgerIcon />,
@@ -21,7 +22,9 @@ function Button({ type, className }: ButtonProps): JSX.Element {
   };
 
   return (
-    <button className={`${classes.button} ${className}`}>{icons[type]}</button>
+    <button onClick={onClick} className={`${classes.button} ${className}`}>
+      {icons[type]}
+    </button>
   );
 }
 
