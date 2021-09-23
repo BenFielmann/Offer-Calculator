@@ -6,14 +6,20 @@ import Button from '../Button/Button';
 
 export type CardsProps = {
   type: 'checked' | 'asking' | 'chose';
+  name: string;
+  onClick?: () => void;
 };
 
-export default function Cards({ type }: CardsProps): JSX.Element {
+export default function Cards({
+  type,
+  name,
+  onClick,
+}: CardsProps): JSX.Element {
   switch (type) {
     case 'checked':
       return (
         <section className={styles.card}>
-          <p className={styles.textInput}>Facility Management</p>
+          <p className={styles.textInput}>{name}</p>
           <div className={styles.buttongroup}>
             <CheckIcon className={styles.icon}>{[type]}</CheckIcon>
             <Button type="add" />
@@ -23,7 +29,7 @@ export default function Cards({ type }: CardsProps): JSX.Element {
     case 'asking':
       return (
         <section className={styles.card}>
-          <p className={styles.textInput}>Firma</p>
+          <p className={styles.textInput}>{name}</p>
           <div className={styles.buttongroup}>
             <QuestionIcon className={styles.icon}>{[type]}</QuestionIcon>
             <Button type="add" />
@@ -33,8 +39,8 @@ export default function Cards({ type }: CardsProps): JSX.Element {
     case 'chose':
       return (
         <section className={styles.card}>
-          <p className={styles.textInput}>Elektriker</p>
-          <Button className={styles.addbutton} type="add" />
+          <p className={styles.textInput}>{name}</p>
+          <Button onClick={onClick} className={styles.addbutton} type="add" />
         </section>
       );
   }
