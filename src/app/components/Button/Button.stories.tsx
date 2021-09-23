@@ -11,3 +11,4 @@ export const BurgerButton = (): JSX.Element => <Button type="burger" />;
 export const DeleteButton = (): JSX.Element => <Button type="delete" />;
 export const EditButton = (): JSX.Element => <Button type="edit" />;
 export const MailButton = (): JSX.Element => <Button type="mail" />;
+export const CalculateButton = (): JSX.Element => <Button type="calculate" />;

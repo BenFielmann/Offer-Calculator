@@ -8,7 +8,7 @@ import CalculateIcon from '../assets/CalculateIcon';
 import classes from './Button.module.css';
 
 type ButtonProps = {
-  type: 'add' | 'burger' | 'delete' | 'edit' | 'mail' | 'submit';
+  type: 'add' | 'burger' | 'delete' | 'edit' | 'mail' | 'calculate';
   className?: string;
   onClick?: () => void;
 };
@@ -20,7 +20,7 @@ function Button({ type, className, onClick }: ButtonProps): JSX.Element {
     delete: <DeleteIcon />,
     edit: <EditIcon />,
     mail: <MailIcon />,
-    submit: <CalculateIcon />,
+    calculate: <CalculateIcon />,
   };
 
   return (
