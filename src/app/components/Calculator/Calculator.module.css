@@ -1,0 +1,46 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  outline: none;
+  background-color: var(--text-primary);
+}
+
+.metaData {
+  width: 100%;
+  background-color: transparent;
+  color: var(--color-primary);
+  outline: none;
+  border: none;
+  text-decoration: underline;
+  font-family: var(--font-face);
+  font-size: 1rem;
+  margin: 1rem 0 0 0;
+  padding-left: 1rem;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.test::placeholder {
+  color: var(--bg-primary);
+}
+
+.result {
+  margin: 1rem 1rem 1rem 1rem;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.label {
+  margin: 1rem 1rem 0 1rem;
+  padding: 0;
+}
+
+.button {
+  margin: 1rem 1rem 1rem 1rem;
+  display: flex;
+  justify-content: flex-end;
+}

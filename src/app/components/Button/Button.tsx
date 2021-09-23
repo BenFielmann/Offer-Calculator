@@ -4,10 +4,11 @@ import BurgerIcon from '../assets/BurgerIcon';
 import DeleteIcon from '../assets/DeleteIcon';
 import EditIcon from '../assets/EditIcon';
 import MailIcon from '../assets/MailIcon';
+import CalculateIcon from '../assets/CalculateIcon';
 import classes from './Button.module.css';
 
 type ButtonProps = {
-  type: 'add' | 'burger' | 'delete' | 'edit' | 'mail';
+  type: 'add' | 'burger' | 'delete' | 'edit' | 'mail' | 'calculate';
   className?: string;
   onClick?: () => void;
 };
@@ -19,6 +20,7 @@ function Button({ type, className, onClick }: ButtonProps): JSX.Element {
     delete: <DeleteIcon />,
     edit: <EditIcon />,
     mail: <MailIcon />,
+    calculate: <CalculateIcon />,
   };
 
   return (

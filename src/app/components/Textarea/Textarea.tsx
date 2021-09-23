@@ -3,14 +3,6 @@ import CheckIcon from '../assets/CheckIcon';
 import styles from './Textarea.module.css';
 import Button from '../Button/Button';
 
-/* import Navigation from '../Navigation/Navigation'; */
-
-/* Wenn blahh Anzahl Zeichen im Textfeld
-dann gib mir blaues läuchten auf Navi rechts
-druch Click wechsel zu Profilansicht
- als type checked, oder Icon dort displayen? 
- switch case ? */
-
 export type TextareaProps = {
   isEditable: boolean;
   setIsEditable: (value: boolean) => void;
@@ -147,7 +139,7 @@ export default function Textarea({
           <input
             value={managerValue}
             onChange={(event) => setManagerValue(event.target.value)}
-            placeholder="Leitender Angestellter:"
+            placeholder="Leitender Angestellter (Ansprechpartner):"
             type="text"
             className={styles.textInput}
           />
@@ -171,7 +163,7 @@ export default function Textarea({
           <p className={styles.InputOutput}>PLZ: {plzValue}</p>
           <p className={styles.InputOutput}>Stadt: {cityValue}</p>
           <p className={styles.InputOutput}>
-            Leitender Angstellter: {managerValue}
+            Leitender Angstellter (Ansprechpartner): {managerValue}
           </p>
           <p className={styles.InputOutput}>Tel: {managerPhoneValue}</p>
         </>
