@@ -17,9 +17,8 @@ export default function DropdownMenu(): JSX.Element {
     >
       <MenuItem>Profil Übersicht</MenuItem>
       <MenuItem>Kunden Übersicht</MenuItem>
-      <MenuItem>Rechner 1</MenuItem>
-      <MenuItem>Rechner 2</MenuItem>
-      <MenuItem>TodaysPlaceholder</MenuItem>
+      <MenuItem>Stundensatz Rechner</MenuItem>
+      <MenuItem>Quadratmeter Rechner</MenuItem>
     </Menu>
   );
 }
