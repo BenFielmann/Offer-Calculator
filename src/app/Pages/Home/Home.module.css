@@ -1,3 +1,13 @@
-.test {
-  color: transparent;
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.cardWrapper {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-rows: min-content;
+  padding: 1rem;
+  overflow: scroll;
 }
