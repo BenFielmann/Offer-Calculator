@@ -9,9 +9,9 @@ export default function DropdownMenu(): JSX.Element {
   return (
     <Menu
       menuButton={
-        <MenuButton className={styles.BurgerIcon}>
+        <MenuButton className={styles.button}>
           {' '}
-          <BurgerIcon />{' '}
+          <BurgerIcon className={styles.burgerIcon} />{' '}
         </MenuButton>
       }
     >
