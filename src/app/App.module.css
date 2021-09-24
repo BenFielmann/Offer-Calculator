@@ -1,3 +1,7 @@
+.app {
+  background-color: transparent;
+}
+
 .App-logo {
   pointer-events: none;
 }
