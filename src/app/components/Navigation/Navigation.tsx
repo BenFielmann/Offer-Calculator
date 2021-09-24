@@ -41,14 +41,13 @@ function Navigation({
         />
       </Link>
 
-
       <Link to="/">
         <HomeIcon
           className={styles.navigationIcons}
           {...(isHomeActive ? homeActiveStyle : clickableStyle)}
         />
       </Link>
-      
+
       <Link to="/forward">
         <ForwardIcon
           className={styles.navigationIcons}
