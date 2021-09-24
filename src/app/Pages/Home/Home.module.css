@@ -2,13 +2,12 @@
   height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr;
-  background: var(--bg-primary);
 }
 
 .cardWrapper {
-  display: grid;
+  display: flex;
   gap: 1.5rem;
-  grid-template-rows: min-content;
+  flex-direction: column;
   padding: 1rem;
   overflow: scroll;
 }
