@@ -10,7 +10,7 @@ export default function Home(): JSX.Element {
   return (
     <div className={styles.container}>
       <Header name="ANGEBOTSRECHNER" />
-      <div className={styles.cardWrapper}>
+      <main className={styles.cardWrapper}>
         <Cards
           onClick={() => history.push('/industries')}
           name="BRANCHEN PROFILE"
@@ -21,7 +21,7 @@ export default function Home(): JSX.Element {
           name="NEUES OBJECT"
           type="chose"
         />
-      </div>
+      </main>
       <Navigation callToAction={false} isFirstStep={true} isHomeActive={true} />
     </div>
   );
