@@ -6,4 +6,6 @@ export default {
   component: Header,
 };
 
-export const HeaderComponent = (): JSX.Element => <Header />;
+export const HeaderComponent = (): JSX.Element => (
+  <Header name="ANGEBOTSRECHNER" />
+);
