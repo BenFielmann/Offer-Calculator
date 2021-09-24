@@ -6,6 +6,12 @@ export default {
   component: Cards,
 };
 
-export const CheckedCard = (): JSX.Element => <Cards type="checked" />;
-export const AskingCard = (): JSX.Element => <Cards type="asking" />;
-export const choseCard = (): JSX.Element => <Cards type="chose" />;
+export const CheckedCard = (): JSX.Element => (
+  <Cards type="checked" name="Elektriker" />
+);
+export const AskingCard = (): JSX.Element => (
+  <Cards type="asking" name="Elektriker" />
+);
+export const choseCard = (): JSX.Element => (
+  <Cards type="chose" name="Elektriker" />
+);

@@ -26,4 +26,9 @@
 body {
   margin: 0;
   font-family: var(--font-face);
+  background: var(--bg-primary);
+  background-image: url(./components/assets/Worker.png);
+  background-repeat: no-repeat;
+  background-position-y: 90%;
+  background-position-x: center;
 }

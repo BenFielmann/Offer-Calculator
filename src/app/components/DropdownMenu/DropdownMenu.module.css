@@ -1,6 +1,21 @@
-.BurgerIcon {
+.button {
   border: none;
-  background: transparent;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.burgerIcon {
+  border: none;
+  background-color: transparent;
+  fill: var(--text-primary);
   width: 20px;
   height: 20px;
+}
+
+.burgerIcon:active {
+  fill: var(--color-secondary);
+}
+.burgerIcon:hover {
+  fill: var(--color-secondary);
 }
