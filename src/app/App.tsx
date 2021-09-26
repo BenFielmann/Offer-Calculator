@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from './Pages/Home/Home';
-
+import Calculate from './Pages/Calculate/Calculate';
 import styles from './App.module.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
@@ -9,6 +9,9 @@ function App(): JSX.Element {
     <BrowserRouter>
       <div className={styles.App}>
         <Switch>
+          <Route path="/calculate">
+            <Calculate />
+          </Route>
           <Route path="/">
             <Home />
           </Route>
