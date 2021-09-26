@@ -31,7 +31,11 @@ export default function ProfileOverview(): JSX.Element {
           managerPhoneValue="0...."
         />
       </main>
-      <Navigation callToAction={false} isFirstStep={false} isHomeActive={true} />
+      <Navigation
+        callToAction={false}
+        isFirstStep={false}
+        isHomeActive={true}
+      />
     </div>
   );
 }
