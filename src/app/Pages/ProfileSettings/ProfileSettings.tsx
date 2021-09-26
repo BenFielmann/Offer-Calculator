@@ -9,7 +9,7 @@ export default function ProfileSettings(): JSX.Element {
   const history = useHistory();
   return (
     <div className={styles.container}>
-      <Header name="ANGEBOTSRECHNER" />
+      <Header name="PROFILEINSTELLUNG" />
       <main className={styles.cardWrapper}>
         <Cards
           onClick={() => history.push('/industries')}
