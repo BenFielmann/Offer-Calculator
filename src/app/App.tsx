@@ -7,6 +7,7 @@ import Date from './Pages/Date/Date';
 import Calculate from './Pages/Calculate/Calculate';
 import NewObject from './Pages/NewObject/NewObject';
 import CompanyDetails from './Pages/CompanyDetails/CompanyDetails';
+import CompanyOverview from './Pages/CompanyOverview/CompanyOverview';
 import ProfileSettings from './Pages/ProfileSettings/ProfileSettings';
 import Industries from './Pages/Industries/Industries';
 import styles from './App.module.css';
@@ -34,6 +35,9 @@ function App(): JSX.Element {
           </Route>
           <Route path="/newobject">
             <NewObject />
+          </Route>
+          <Route path="/companyoverview">
+            <CompanyOverview />
           </Route>
           <Route path="/companydetails">
             <CompanyDetails />
