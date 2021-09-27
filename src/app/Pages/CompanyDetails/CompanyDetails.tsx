@@ -41,22 +41,6 @@ export default function CompanyDetails(): JSX.Element {
           managerPhoneValue=""
           setManagerPhoneValue={console.log}
         />
-        <Textarea
-          isEditable={false}
-          setIsEditable={console.log}
-          onDeleteClick={console.log}
-          companyValue="Muster Firma"
-          ceoValue="Muster Mann"
-          phoneNumberValue="0...."
-          mobileValue="0...."
-          emailValue="Muster@mail.de"
-          urlValue="www.Muster.de"
-          streetValue="Muster Straße"
-          plzValue="0...."
-          cityValue="Muster Stadt"
-          managerValue="Muster Frau"
-          managerPhoneValue="0...."
-        />
       </main>
       <Navigation
         callToAction={true}
