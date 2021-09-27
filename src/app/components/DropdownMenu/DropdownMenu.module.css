@@ -8,14 +8,14 @@
 .burgerIcon {
   border: none;
   background-color: transparent;
-  fill: var(--text-primary);
+  fill: var(--color-secondary);
   width: 20px;
   height: 20px;
 }
 
 .burgerIcon:active {
-  fill: var(--color-secondary);
+  fill: var(--text-primary);
 }
 .burgerIcon:hover {
-  fill: var(--color-secondary);
+  fill: var(--text-primary);
 }
