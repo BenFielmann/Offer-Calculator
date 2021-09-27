@@ -1,15 +1,15 @@
 import React from 'react';
-import Home from './Pages/Home/Home';
-import CustomerOverview from './Pages/CustomerOverview/CustomerOverview';
-import CustomerDetails from './Pages/CustomerDetails/CustomerDetails';
-import ProfileOverview from './Pages/ProfileOverview/ProfileOverview';
-import Date from './Pages/Date/Date';
-import Calculate from './Pages/Calculate/Calculate';
-import NewObject from './Pages/NewObject/NewObject';
-import CompanyDetails from './Pages/CompanyDetails/CompanyDetails';
-import CompanyOverview from './Pages/CompanyOverview/CompanyOverview';
-import ProfileSettings from './Pages/ProfileSettings/ProfileSettings';
-import Industries from './Pages/Industries/Industries';
+import Home from './Pages/home/Home';
+import CustomerOverview from './Pages/customerOverview/CustomerOverview';
+import CustomerDetails from './Pages/customerDetails/CustomerDetails';
+import ProfileOverview from './Pages/profileOverview/ProfileOverview';
+import Date from './Pages/date/Date';
+import Calculate from './Pages/calculate/Calculate';
+import NewObject from './Pages/newObject/NewObject';
+import CompanyDetails from './Pages/companyDetails/CompanyDetails';
+import CompanyOverview from './Pages/companyOverview/CompanyOverview';
+import ProfileSettings from './Pages/profileSettings/ProfileSettings';
+import Industries from './Pages/industries/Industries';
 import styles from './App.module.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
