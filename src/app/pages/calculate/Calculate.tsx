@@ -8,10 +8,7 @@ export default function Calculate(): JSX.Element {
   return (
     <div className={styles.container}>
       <Header name="STUNDEN PREISRECHNER" />
-      <main
-        
-        className={styles.cardWrapper}
-      >
+      <main className={styles.cardWrapper}>
         <Calculator />
       </main>
       <Navigation

@@ -9,9 +9,7 @@ export default function CustomerDetails(): JSX.Element {
   return (
     <div className={styles.container}>
       <Header name="KUNDEN DATEN" />
-      <main
-        className={styles.cardWrapper}
-      >
+      <main className={styles.cardWrapper}>
         <Textarea
           isEditable={true}
           setIsEditable={console.log}
