@@ -139,7 +139,7 @@ export default function Textarea({
           <input
             value={managerValue}
             onChange={(event) => setManagerValue(event.target.value)}
-            placeholder="Leitender Angestellter (Ansprechpartner):"
+            placeholder="Ansprechpartner:"
             type="text"
             className={styles.textInput}
           />
@@ -162,9 +162,7 @@ export default function Textarea({
           <p className={styles.InputOutput}>Straße: {streetValue}</p>
           <p className={styles.InputOutput}>PLZ: {plzValue}</p>
           <p className={styles.InputOutput}>Stadt: {cityValue}</p>
-          <p className={styles.InputOutput}>
-            Leitender Angstellter (Ansprechpartner): {managerValue}
-          </p>
+          <p className={styles.InputOutput}>Ansprechpartner: {managerValue}</p>
           <p className={styles.InputOutput}>Tel: {managerPhoneValue}</p>
         </>
       )}
