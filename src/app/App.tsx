@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './Pages/Home/Home';
 import ProfileSettings from './Pages/ProfileSettings/ProfileSettings';
+import Industries from './Pages/Industries/Industries';
 import styles from './App.module.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
@@ -11,6 +12,9 @@ function App(): JSX.Element {
         <Switch>
           <Route path="/profilesettings">
             <ProfileSettings />
+          </Route>
+          <Route path="/industries">
+            <Industries />
           </Route>
           <Route path="/">
             <Home />
