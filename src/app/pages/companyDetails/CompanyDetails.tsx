@@ -3,17 +3,12 @@ import Header from '../../components/Header/Header';
 import Navigation from '../../components/Navigation/Navigation';
 import Textarea from '../../components/Textarea/Textarea';
 import styles from './CompanyDetails.module.css';
-import { useHistory } from 'react-router';
 
 export default function CompanyDetails(): JSX.Element {
-  const history = useHistory();
   return (
     <div className={styles.container}>
       <Header name="FIRMEN DETAILS" />
-      <main
-        onClick={() => history.push('/profielsettings')}
-        className={styles.cardWrapper}
-      >
+      <main className={styles.cardWrapper}>
         <Textarea
           isEditable={true}
           setIsEditable={console.log}

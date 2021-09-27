@@ -17,37 +17,37 @@ export default function Industries(): JSX.Element {
           type="chose"
         />
         <Cards
-          onClick={() => history.push('/newobject')}
+          onClick={() => history.push('/profilesettings')}
           name="Elektriker"
           type="chose"
         />
         <Cards
-          onClick={() => history.push('/newobject')}
+          onClick={() => history.push('/profilesettings')}
           name="Fensterbauer"
           type="chose"
         />
         <Cards
-          onClick={() => history.push('/newobject')}
+          onClick={() => history.push('/profilesettings')}
           name="Facility Management"
           type="chose"
         />
         <Cards
-          onClick={() => history.push('/industries')}
+          onClick={() => history.push('/profilesettings')}
           name="Gas & Wasser"
           type="chose"
         />
         <Cards
-          onClick={() => history.push('/newobject')}
+          onClick={() => history.push('/profilesettings')}
           name="Maler & Lackierer"
           type="chose"
         />
         <Cards
-          onClick={() => history.push('/newobject')}
+          onClick={() => history.push('/profilesettings')}
           name="Maurer"
           type="chose"
         />
         <Cards
-          onClick={() => history.push('/newobject')}
+          onClick={() => history.push('/profilesettings')}
           name="Tischler"
           type="chose"
         />

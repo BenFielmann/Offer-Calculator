@@ -17,18 +17,13 @@ export default function ProfileSettings(): JSX.Element {
           type="checked"
         />
         <Cards
-          onClick={() => history.push('/newobject')}
+          onClick={() => history.push('/companydetails')}
           name="Firma"
           type="chose"
         />
         <Cards
-          onClick={() => history.push('/newobject')}
+          onClick={() => history.push('/calculate')}
           name="Stundensatz"
-          type="chose"
-        />
-        <Cards
-          onClick={() => history.push('/newobject')}
-          name="Quatratmeter"
           type="chose"
         />
       </main>

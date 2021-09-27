@@ -12,33 +12,23 @@ export default function NewObject(): JSX.Element {
       <Header name="NEUES OBJEKT" />
       <main className={styles.cardWrapper}>
         <Cards
-          onClick={() => history.push('/industries')}
+          onClick={() => history.push('/profileoverview')}
           name="Profil"
           type="asking"
         />
         <Cards
-          onClick={() => history.push('/newobject')}
+          onClick={() => history.push('/customerdetails')}
           name="Kunden Daten"
           type="asking"
         />
         <Cards
-          onClick={() => history.push('/newobject')}
+          onClick={() => history.push('/date')}
           name="Datum"
           type="asking"
         />
         <Cards
-          onClick={() => history.push('/newobject')}
-          name="Stunden ca."
-          type="asking"
-        />
-        <Cards
-          onClick={() => history.push('/newobject')}
+          onClick={() => history.push('/calculate')}
           name="Stundensatz"
-          type="asking"
-        />
-        <Cards
-          onClick={() => history.push('/newobject')}
-          name="Quatratmeter"
           type="asking"
         />
       </main>
