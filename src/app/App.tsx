@@ -1,5 +1,6 @@
 import React from 'react';
 import Home from './Pages/Home/Home';
+import Date from './Pages/Date/Date';
 import Calculate from './Pages/Calculate/Calculate';
 import NewObject from './Pages/NewObject/NewObject';
 import CompanyDetails from './Pages/CompanyDetails/CompanyDetails';
@@ -13,6 +14,9 @@ function App(): JSX.Element {
     <BrowserRouter>
       <div className={styles.App}>
         <Switch>
+          <Route path="/date">
+            <Date />
+          </Route>
           <Route path="/calculate">
             <Calculate />
           </Route>

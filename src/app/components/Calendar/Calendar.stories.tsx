@@ -6,4 +6,4 @@ export default {
   component: ReactCalendar,
 };
 
-export const Calendar = (): JSX.Element => <ReactCalendar></ReactCalendar>;
+export const Calendar = (): JSX.Element => <ReactCalendar />;
