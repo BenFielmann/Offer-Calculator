@@ -1,5 +1,6 @@
 import React from 'react';
 import Home from './Pages/Home/Home';
+import CustomerOverview from './Pages/CustomerOverview/CustomerOverview';
 import CustomerDetails from './Pages/CustomerDetails/CustomerDetails';
 import ProfileOverview from './Pages/ProfileOverview/ProfileOverview';
 import Date from './Pages/Date/Date';
@@ -16,6 +17,9 @@ function App(): JSX.Element {
     <BrowserRouter>
       <div className={styles.App}>
         <Switch>
+          <Route path="/customeroverview">
+            <CustomerOverview />
+          </Route>
           <Route path="/customerdetails">
             <CustomerDetails />
           </Route>
