@@ -1,5 +1,6 @@
 import React from 'react';
 import Home from './Pages/Home/Home';
+import NewObject from './Pages/NewObject/NewObject';
 import CompanyDetails from './Pages/CompanyDetails/CompanyDetails';
 import ProfileSettings from './Pages/ProfileSettings/ProfileSettings';
 import Industries from './Pages/Industries/Industries';
@@ -11,6 +12,9 @@ function App(): JSX.Element {
     <BrowserRouter>
       <div className={styles.App}>
         <Switch>
+          <Route path="/newobject">
+            <NewObject />
+          </Route>
           <Route path="/companydetails">
             <CompanyDetails />
           </Route>
