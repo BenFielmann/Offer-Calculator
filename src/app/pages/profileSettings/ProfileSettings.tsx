@@ -3,29 +3,37 @@ import Header from '../../components/Header/Header';
 import Navigation from '../../components/Navigation/Navigation';
 import Cards from '../../components/Cards/Cards';
 import styles from './ProfileSettings.module.css';
-import { useHistory } from 'react-router';
 
 export default function ProfileSettings(): JSX.Element {
-  const history = useHistory();
+  const mockUpData = [
+    {
+      tittle: 'Facility Management',
+      type: 'checked',
+      goTo: '/industries',
+    },
+    {
+      tittle: 'Firma',
+      type: 'chose',
+      goTo: '/companydetails',
+    },
+    {
+      tittle: 'Stundensatz',
+      type: 'chose',
+      goTo: '/calculate',
+    },
+  ];
   return (
     <div className={styles.container}>
       <Header name="PROFILEINSTELLUNG" />
       <main className={styles.cardWrapper}>
-        <Cards
-          onClick={() => history.push('/industries')}
-          name="Facility Management"
-          type="checked"
-        />
-        <Cards
-          onClick={() => history.push('/companydetails')}
-          name="Firma"
-          type="chose"
-        />
-        <Cards
-          onClick={() => history.push('/calculate')}
-          name="Stundensatz"
-          type="chose"
-        />
+        {mockUpData.map((card) => (
+          <Cards
+            onClick={() => console.log('hey')}
+            name={card.tittle}
+            type={card.type}
+            goTo={card.goTo}
+          />
+        ))}
       </main>
       <Navigation
         callToAction={false}

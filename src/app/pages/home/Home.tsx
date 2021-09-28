@@ -3,24 +3,33 @@ import Header from '../../components/Header/Header';
 import Navigation from '../../components/Navigation/Navigation';
 import Cards from '../../components/Cards/Cards';
 import styles from './Home.module.css';
-import { useHistory } from 'react-router';
 
 export default function Home(): JSX.Element {
-  const history = useHistory();
+  const mockUpData = [
+    {
+      tittle: 'BRANCHEN PROFILE',
+      type: 'chose',
+      goTo: '/industries',
+    },
+    {
+      tittle: 'NEUES OBJEKT',
+      type: 'chose',
+      goTo: '/newobject',
+    },
+  ];
+
   return (
     <div className={styles.container}>
       <Header name="ANGEBOTSRECHNER" />
       <main className={styles.cardWrapper}>
-        <Cards
-          onClick={() => history.push('/industries')}
-          name="BRANCHEN PROFILE"
-          type="chose"
-        />
-        <Cards
-          onClick={() => history.push('/newobject')}
-          name="NEUES OBJECT"
-          type="chose"
-        />
+        {mockUpData.map((card) => (
+          <Cards
+            onClick={() => console.log('hey')}
+            name={card.tittle}
+            type={card.type}
+            goTo={card.goTo}
+          />
+        ))}
       </main>
       <Navigation callToAction={false} isFirstStep={true} isHomeActive={true} />
     </div>
