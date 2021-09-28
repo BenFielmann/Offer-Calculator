@@ -27,9 +27,9 @@ export default function ProfileOverview(): JSX.Element {
         />
       </main>
       <Navigation
-        callToAction={false}
+        callToAction={true}
         isFirstStep={false}
-        isHomeActive={true}
+        isHomeActive={false}
       />
     </div>
   );
