@@ -45,7 +45,10 @@ export default function OfferOverview(): JSX.Element {
       <Navigation
         callToAction={false}
         isFirstStep={false}
-        isHomeActive={true} goBack={''} goForward={''}      />
+        isHomeActive={true}
+        goBack={''}
+        goForward={''}
+      />
     </div>
   );
 }
