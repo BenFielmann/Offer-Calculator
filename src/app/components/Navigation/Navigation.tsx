@@ -9,12 +9,16 @@ export type Navigationprops = {
   isHomeActive?: boolean;
   isFirstStep?: boolean;
   callToAction?: boolean;
+  goBack: string;
+  goForward: string;
 };
 /*  */
 function Navigation({
   isHomeActive,
   isFirstStep,
   callToAction,
+  goBack,
+  goForward,
 }: Navigationprops): JSX.Element {
   const clickableStyle = {
     fill: 'var(--text-primary)',
@@ -34,7 +38,7 @@ function Navigation({
 
   return (
     <nav className={`${styles.navigation}`}>
-      <Link to="/back">
+      <Link to={goBack}>
         <BackIcon
           className={styles.navigationIcons}
           {...(isFirstStep ? disabledStyle : clickableStyle)}
@@ -48,7 +52,7 @@ function Navigation({
         />
       </Link>
 
-      <Link to="/forward">
+      <Link to={goForward}>
         <ForwardIcon
           className={styles.navigationIcons}
           {...(callToAction ? callToActionStyle : disabledStyle)}

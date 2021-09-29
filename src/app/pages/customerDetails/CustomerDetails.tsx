@@ -1,19 +1,15 @@
+export {};
 import React from 'react';
 import Header from '../../components/Header/Header';
 import Navigation from '../../components/Navigation/Navigation';
 import Textarea from '../../components/Textarea/Textarea';
-import styles from './CompanyDetails.module.css';
-import { useHistory } from 'react-router';
+import styles from './CustomerDetails.module.css';
 
-export default function CompanyDetails(): JSX.Element {
-  const history = useHistory();
+export default function CustomerDetails(): JSX.Element {
   return (
     <div className={styles.container}>
-      <Header name="FIRMEN DETAILS" />
-      <main
-        onClick={() => history.push('/profielsettings')}
-        className={styles.cardWrapper}
-      >
+      <Header name="KUNDEN DATEN" />
+      <main className={styles.cardWrapper}>
         <Textarea
           isEditable={true}
           setIsEditable={console.log}
@@ -41,27 +37,13 @@ export default function CompanyDetails(): JSX.Element {
           managerPhoneValue=""
           setManagerPhoneValue={console.log}
         />
-        <Textarea
-          isEditable={false}
-          setIsEditable={console.log}
-          onDeleteClick={console.log}
-          companyValue="Muster Firma"
-          ceoValue="Muster Mann"
-          phoneNumberValue="0...."
-          mobileValue="0...."
-          emailValue="Muster@mail.de"
-          urlValue="www.Muster.de"
-          streetValue="Muster Straße"
-          plzValue="0...."
-          cityValue="Muster Stadt"
-          managerValue="Muster Frau"
-          managerPhoneValue="0...."
-        />
       </main>
       <Navigation
         callToAction={true}
         isFirstStep={false}
         isHomeActive={false}
+        goBack={'/newobject'}
+        goForward={''}
       />
     </div>
   );

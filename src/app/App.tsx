@@ -1,14 +1,16 @@
 import React from 'react';
-import Home from './Pages/Home/Home';
-import CustomerOverview from './Pages/CustomerOverview/CustomerOverview';
-import CustomerDetails from './Pages/CustomerDetails/CustomerDetails';
-import ProfileOverview from './Pages/ProfileOverview/ProfileOverview';
-import Date from './Pages/Date/Date';
-import Calculate from './Pages/Calculate/Calculate';
-import NewObject from './Pages/NewObject/NewObject';
-import CompanyDetails from './Pages/CompanyDetails/CompanyDetails';
-import ProfileSettings from './Pages/ProfileSettings/ProfileSettings';
-import Industries from './Pages/Industries/Industries';
+import Home from './pages/home/Home';
+import CustomerOverview from './pages/customerOverview/CustomerOverview';
+import CustomerDetails from './pages/customerDetails/CustomerDetails';
+import ProfileOverview from './pages/profileOverview/ProfileOverview';
+import Date from './pages/date/Date';
+import Calculate from './pages/calculate/Calculate';
+import NewObject from './pages/newObject/NewObject';
+import CompanyDetails from './pages/companyDetails/CompanyDetails';
+import CompanyOverview from './pages/companyOverview/CompanyOverview';
+import ProfileSettings from './pages/profileSettings/ProfileSettings';
+import Industries from './pages/industries/Industries';
+import OfferOverview from './pages/offerOverview/offerOverview';
 import styles from './App.module.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
@@ -17,6 +19,9 @@ function App(): JSX.Element {
     <BrowserRouter>
       <div className={styles.App}>
         <Switch>
+          <Route path="/offeroverview">
+            <OfferOverview />
+          </Route>
           <Route path="/customeroverview">
             <CustomerOverview />
           </Route>
@@ -34,6 +39,9 @@ function App(): JSX.Element {
           </Route>
           <Route path="/newobject">
             <NewObject />
+          </Route>
+          <Route path="/companyoverview">
+            <CompanyOverview />
           </Route>
           <Route path="/companydetails">
             <CompanyDetails />

@@ -3,17 +3,12 @@ import Header from '../../components/Header/Header';
 import Navigation from '../../components/Navigation/Navigation';
 import Textarea from '../../components/Textarea/Textarea';
 import styles from './CustomerOverview.module.css';
-import { useHistory } from 'react-router';
 
 export default function CustomerOverview(): JSX.Element {
-  const history = useHistory();
   return (
     <div className={styles.container}>
       <Header name="KUNDEN ÜBERSICHT" />
-      <main
-        onClick={() => history.push('/industries')}
-        className={styles.cardWrapper}
-      >
+      <main className={styles.cardWrapper}>
         <Textarea
           isEditable={false}
           setIsEditable={console.log}
@@ -35,6 +30,8 @@ export default function CustomerOverview(): JSX.Element {
         callToAction={false}
         isFirstStep={false}
         isHomeActive={true}
+        goBack={''}
+        goForward={''}
       />
     </div>
   );

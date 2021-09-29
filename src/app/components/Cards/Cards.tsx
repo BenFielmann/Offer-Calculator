@@ -3,45 +3,53 @@ import CheckIcon from '../assets/CheckIcon';
 import QuestionIcon from '../assets/QuestionIcon';
 import styles from './Cards.module.css';
 import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
 
 export type CardsProps = {
-  type: 'checked' | 'asking' | 'chose';
+  type: string;
   name: string;
+  goTo: string;
   onClick?: () => void;
 };
 
 export default function Cards({
+  goTo,
   type,
   name,
   onClick,
 }: CardsProps): JSX.Element {
-  switch (type) {
-    case 'checked':
-      return (
+  return (
+    <div>
+      {type === 'checked' && (
         <section className={styles.card}>
           <p className={styles.textInput}>{name}</p>
           <div className={styles.buttongroup}>
             <CheckIcon className={styles.icon}>{[type]}</CheckIcon>
-            <Button type="add" />
+            <Link to={goTo}>
+              <Button onClick={onClick} type="add" />
+            </Link>
           </div>
         </section>
-      );
-    case 'asking':
-      return (
+      )}
+      {type === 'asking' && (
         <section className={styles.card}>
           <p className={styles.textInput}>{name}</p>
           <div className={styles.buttongroup}>
             <QuestionIcon className={styles.icon}>{[type]}</QuestionIcon>
-            <Button type="add" />
+            <Link to={goTo}>
+              <Button onClick={onClick} type="add" />
+            </Link>
           </div>
         </section>
-      );
-    case 'chose':
-      return (
+      )}
+      {type === 'chose' && (
         <section className={styles.card}>
           <p className={styles.textInput}>{name}</p>
-          <Button onClick={onClick} className={styles.addbutton} type="add" />
+          <Link to={goTo}>
+            <Button onClick={onClick} className={styles.addbutton} type="add" />
+          </Link>
         </section>
-      );
-  }
+      )}
+    </div>
+  );
 }
