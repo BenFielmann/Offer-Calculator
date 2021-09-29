@@ -10,6 +10,7 @@ import CompanyDetails from './pages/companyDetails/CompanyDetails';
 import CompanyOverview from './pages/companyOverview/CompanyOverview';
 import ProfileSettings from './pages/profileSettings/ProfileSettings';
 import Industries from './pages/industries/Industries';
+import OfferOverview from './pages/offerOverview/offerOverview';
 import styles from './App.module.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
@@ -18,6 +19,9 @@ function App(): JSX.Element {
     <BrowserRouter>
       <div className={styles.App}>
         <Switch>
+          <Route path="/offeroverview">
+            <OfferOverview />
+          </Route>
           <Route path="/customeroverview">
             <CustomerOverview />
           </Route>
