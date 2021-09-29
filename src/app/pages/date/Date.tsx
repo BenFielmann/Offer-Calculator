@@ -15,6 +15,8 @@ export default function Date(): JSX.Element {
         callToAction={false}
         isFirstStep={false}
         isHomeActive={false}
+        goBack={'/profilesetting'}
+        goForward={''}
       />
     </div>
   );

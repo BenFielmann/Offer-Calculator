@@ -43,8 +43,7 @@ export default function NewObject(): JSX.Element {
       <Navigation
         callToAction={false}
         isFirstStep={true}
-        isHomeActive={false}
-      />
+        isHomeActive={false} goBack={''} goForward={''}      />
     </div>
   );
 }

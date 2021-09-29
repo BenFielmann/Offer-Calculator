@@ -39,6 +39,8 @@ export default function ProfileSettings(): JSX.Element {
         callToAction={false}
         isFirstStep={false}
         isHomeActive={false}
+        goBack={'/industries'}
+        goForward={''}
       />
     </div>
   );

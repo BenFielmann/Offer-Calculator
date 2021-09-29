@@ -16,11 +16,12 @@ export default function CompanyDetails(): JSX.Element {
   const [cityValue, setCityValue] = useState('');
   const [managerValue, setManagerValue] = useState('');
   const [managerPhoneValue, setManagerPhoneValue] = useState('');
+
   return (
     <div className={styles.container}>
       <Header name="FIRMEN DETAILS" />
       <main className={styles.cardWrapper}>
-        <form action="">
+        <form>
           <Textarea
             isEditable={true}
             setIsEditable={console.log}
@@ -54,6 +55,8 @@ export default function CompanyDetails(): JSX.Element {
         callToAction={true}
         isFirstStep={false}
         isHomeActive={false}
+        goBack={'/profilesettings'}
+        goForward={'/companyoverview'}
       />
     </div>
   );

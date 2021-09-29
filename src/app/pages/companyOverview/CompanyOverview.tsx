@@ -46,6 +46,8 @@ export default function CompanyOverview(): JSX.Element {
         callToAction={true}
         isFirstStep={false}
         isHomeActive={false}
+        goBack={'/companydetails'}
+        goForward={'/profilesettings'}
       />
     </div>
   );

@@ -42,6 +42,8 @@ export default function CustomerDetails(): JSX.Element {
         callToAction={true}
         isFirstStep={false}
         isHomeActive={false}
+        goBack={'/newobject'}
+        goForward={''}
       />
     </div>
   );

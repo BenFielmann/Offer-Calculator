@@ -15,6 +15,8 @@ export default function Calculate(): JSX.Element {
         callToAction={true}
         isFirstStep={false}
         isHomeActive={false}
+        goBack={'/profilesettings'}
+        goForward={'profilesettings'}
       />
     </div>
   );

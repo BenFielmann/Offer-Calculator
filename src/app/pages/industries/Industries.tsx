@@ -65,6 +65,8 @@ export default function Industries(): JSX.Element {
         callToAction={false}
         isFirstStep={false}
         isHomeActive={false}
+        goBack={'/'}
+        goForward={''}
       />
     </div>
   );

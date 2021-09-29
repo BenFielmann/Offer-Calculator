@@ -31,7 +31,13 @@ export default function Home(): JSX.Element {
           />
         ))}
       </main>
-      <Navigation callToAction={false} isFirstStep={true} isHomeActive={true} />
+      <Navigation
+        callToAction={false}
+        isFirstStep={true}
+        isHomeActive={true}
+        goBack={''}
+        goForward={''}
+      />
     </div>
   );
 }

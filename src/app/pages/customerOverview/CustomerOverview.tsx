@@ -29,8 +29,7 @@ export default function CustomerOverview(): JSX.Element {
       <Navigation
         callToAction={false}
         isFirstStep={false}
-        isHomeActive={true}
-      />
+        isHomeActive={true} goBack={''} goForward={''}      />
     </div>
   );
 }

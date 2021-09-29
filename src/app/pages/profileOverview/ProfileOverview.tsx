@@ -30,6 +30,8 @@ export default function ProfileOverview(): JSX.Element {
         callToAction={true}
         isFirstStep={false}
         isHomeActive={false}
+        goBack={'/profilesetting'}
+        goForward={''}
       />
     </div>
   );
