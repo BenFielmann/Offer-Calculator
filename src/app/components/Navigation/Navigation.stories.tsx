@@ -6,12 +6,16 @@ export default {
   component: Navigation,
 };
 
-export const BackActive = (): JSX.Element => <Navigation isFirstStep={false} goBack={''} goForward={''} />;
+export const BackActive = (): JSX.Element => (
+  <Navigation isFirstStep={false} goBack={''} goForward={''} />
+);
 export const BackInactive = (): JSX.Element => (
   <Navigation isFirstStep={true} goBack={''} goForward={''} />
 );
 
-export const HomeActive = (): JSX.Element => <Navigation isHomeActive={true} goBack={''} goForward={''} />;
+export const HomeActive = (): JSX.Element => (
+  <Navigation isHomeActive={true} goBack={''} goForward={''} />
+);
 export const HomeUsable = (): JSX.Element => (
   <Navigation isHomeActive={false} goBack={''} goForward={''} />
 );
