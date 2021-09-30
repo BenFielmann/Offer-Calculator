@@ -17,11 +17,26 @@ export default function CompanyDetails(): JSX.Element {
   const [managerValue, setManagerValue] = useState('');
   const [managerPhoneValue, setManagerPhoneValue] = useState('');
 
+  // useCompanyDetails (custom hook)
+  // const { updateComanyDetails } = useCompanyDetails
+
+  function handleSubmit(event) {
+    event.preventDefault()
+    const details = {
+      name: companyValue,
+      ceo: ceoValue,
+      phone: phoneNumberValue,
+      // all the details, might as well rename the states
+    }
+
+    updateComanyDetails(details)
+  }
+
   return (
     <div className={styles.container}>
       <Header name="FIRMEN DETAILS" />
       <main className={styles.cardWrapper}>
-        <form>
+        <form onSubmit={() => handleSubmit(event)}>
           <Textarea
             isEditable={true}
             setIsEditable={console.log}
@@ -49,6 +64,8 @@ export default function CompanyDetails(): JSX.Element {
             managerPhoneValue={managerPhoneValue}
             setManagerPhoneValue={setManagerPhoneValue}
           />
+          // Add save button
+          <Button type="save" />
         </form>
       </main>
       <Navigation

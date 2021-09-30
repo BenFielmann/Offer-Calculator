@@ -13,6 +13,9 @@ export default function CompanyOverview(): JSX.Element {
       goTo: '/companydetails',
     },
   ];
+
+  const { companyDetails } = useCompanyDetails()
+
   return (
     <div className={styles.container}>
       <Header name="FIRMEN ÜBERSICHT" />
@@ -21,9 +24,9 @@ export default function CompanyOverview(): JSX.Element {
           isEditable={false}
           setIsEditable={console.log}
           onDeleteClick={console.log}
-          companyValue="Muster Firma"
-          ceoValue="Muster Mann"
-          phoneNumberValue="0...."
+          companyValue={companyDetails.name}
+          ceoValue={companyDetails.ceo}
+          phoneNumberValue={companyDetails.phone}
           mobileValue="0...."
           emailValue="Muster@mail.de"
           urlValue="www.Muster.de"

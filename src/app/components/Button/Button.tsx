@@ -24,7 +24,7 @@ function Button({ type, className, onClick }: ButtonProps): JSX.Element {
   };
 
   return (
-    <button onClick={onClick} className={`${classes.button} ${className}`}>
+    <button type="submit" onClick={onClick} className={`${classes.button} ${className}`}>
       {icons[type]}
     </button>
   );
