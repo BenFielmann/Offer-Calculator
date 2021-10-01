@@ -13,6 +13,7 @@ export default function CompanyOverview(): JSX.Element {
       goTo: '/companydetails',
     },
   ];
+
   return (
     <div className={styles.container}>
       <Header name="FIRMEN ÜBERSICHT" />
@@ -38,7 +39,6 @@ export default function CompanyOverview(): JSX.Element {
             onClick={() => console.log('hey')}
             name={card.tittle}
             type={card.type}
-            goTo={card.goTo}
           />
         ))}
       </main>
