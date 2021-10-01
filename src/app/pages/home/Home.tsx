@@ -7,7 +7,7 @@ import Cards from '../../components/Cards/Cards';
 import styles from './Home.module.css';
 
 export default function Home(): JSX.Element {
-  const history = useHistory()
+  const history = useHistory();
   const mockUpData = [
     {
       tittle: 'BRANCHEN PROFILE',
@@ -23,7 +23,7 @@ export default function Home(): JSX.Element {
     <div className={styles.container}>
       <Header name="ANGEBOTSRECHNER" />
       <main className={styles.cardWrapper}>
-        {mockUpData.map((card,index) => (
+        {mockUpData.map((card, index) => (
           <Cards
             onClick={() => history.push('/industries')}
             name={card.tittle}
