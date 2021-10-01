@@ -1,5 +1,4 @@
 import React from 'react';
-import CheckIcon from '../assets/CheckIcon';
 import styles from './Textarea.module.css';
 import Button from '../Button/Button';
 
@@ -91,14 +90,14 @@ export default function Textarea({
             value={phoneNumberValue}
             onChange={(event) => setPhoneNumberValue(event.target.value)}
             placeholder="Tel/Fax:"
-            type="tel"
+            type="number"
             className={styles.textInput}
           />
           <input
             value={mobileValue}
             onChange={(event) => setMobileValue(event.target.value)}
             placeholder="Mobil:"
-            type="tel"
+            type="number"
             className={styles.textInput}
           />
           <input
@@ -112,7 +111,7 @@ export default function Textarea({
             value={urlValue}
             onChange={(event) => setUrlValue(event.target.value)}
             placeholder="Web:"
-            type="url"
+            type="text"
             className={styles.textInput}
           />
           <input
@@ -126,7 +125,7 @@ export default function Textarea({
             value={plzValue}
             onChange={(event) => setPlzValue(event.target.value)}
             placeholder="PLZ:"
-            type="text"
+            type="number"
             className={styles.textInput}
           />
           <input
@@ -147,8 +146,13 @@ export default function Textarea({
             value={managerPhoneValue}
             onChange={(event) => setManagerPhoneValue(event.target.value)}
             placeholder="Tel:"
-            type="tel"
+            type="number"
             className={styles.textInput}
+          />
+          <Button
+            className={styles.submitButton}
+            type="submit"
+            onClick={() => setIsEditable(true)}
           />
         </>
       ) : (
@@ -164,13 +168,12 @@ export default function Textarea({
           <p className={styles.InputOutput}>Stadt: {cityValue}</p>
           <p className={styles.InputOutput}>Ansprechpartner: {managerValue}</p>
           <p className={styles.InputOutput}>Tel: {managerPhoneValue}</p>
+          <div className={styles.buttongroup}>
+            <Button type="edit" onClick={() => setIsEditable(true)} />
+            {!isEditable && <Button type="delete" onClick={onDeleteClick} />}
+          </div>
         </>
       )}
-      <div className={styles.buttongroup}>
-        <Button type="edit" onClick={() => setIsEditable(true)} />
-        {!isEditable && <CheckIcon className={styles.icon}></CheckIcon>}
-        {!isEditable && <Button type="delete" onClick={onDeleteClick} />}
-      </div>
     </section>
   );
 }
