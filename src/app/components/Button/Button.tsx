@@ -5,10 +5,11 @@ import DeleteIcon from '../assets/DeleteIcon';
 import EditIcon from '../assets/EditIcon';
 import MailIcon from '../assets/MailIcon';
 import CalculateIcon from '../assets/CalculateIcon';
+import SubmitIcon from '../assets/SubmitIcon';
 import classes from './Button.module.css';
 
 type ButtonProps = {
-  type: 'add' | 'burger' | 'delete' | 'edit' | 'mail' | 'calculate';
+  type: 'add' | 'burger' | 'delete' | 'edit' | 'mail' | 'calculate' | 'submit';
   className?: string;
   onClick?: () => void;
 };
@@ -21,10 +22,15 @@ function Button({ type, className, onClick }: ButtonProps): JSX.Element {
     edit: <EditIcon />,
     mail: <MailIcon />,
     calculate: <CalculateIcon />,
+    submit: <SubmitIcon />,
   };
 
   return (
-    <button onClick={onClick} className={`${classes.button} ${className}`}>
+    <button
+      type="submit"
+      onClick={onClick}
+      className={`${classes.button} ${className}`}
+    >
       {icons[type]}
     </button>
   );

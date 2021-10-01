@@ -36,7 +36,6 @@ export default function NewObject(): JSX.Element {
             onClick={() => console.log('hey')}
             name={card.tittle}
             type={card.type}
-            goTo={card.goTo}
           />
         ))}
       </main>

@@ -7,11 +7,9 @@ export default {
 };
 
 export const CheckedCard = (): JSX.Element => (
-  <Cards type="checked" name="Elektriker" goTo={''} />
+  <Cards type="checked" name="Elektriker" />
 );
 export const AskingCard = (): JSX.Element => (
-  <Cards type="asking" name="Elektriker" goTo={''} />
+  <Cards type="asking" name="Elektriker" />
 );
-export const choseCard = (): JSX.Element => (
-  <Cards type="chose" name="" goTo={''} />
-);
+export const choseCard = (): JSX.Element => <Cards type="chose" name="" />;

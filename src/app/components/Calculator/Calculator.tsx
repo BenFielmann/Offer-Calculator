@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import useCalculator from '../../hooks/useCalculator';
 import Button from '../Button/Button';
 import styles from './Calculator.module.css';
 
@@ -8,6 +9,8 @@ export default function Calculator(): JSX.Element {
   const [squareMeter, setSquareMeter] = useState('0');
   const [result, setResult] = useState(0);
 
+  const { addCalculator } = useCalculator();
+
   function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
     const m2 = parseInt(squareMeter);
@@ -15,7 +18,9 @@ export default function Calculator(): JSX.Element {
     const sph = parseInt(salaryPerHour);
     const costEstimate = (m2 / m2h) * sph;
     setResult(costEstimate);
+    addCalculator(costEstimate.toString());
   }
+
   return (
     <form onSubmit={handleSubmit} className={styles.main}>
       <label className={styles.label} htmlFor="squareMeterPerHour">

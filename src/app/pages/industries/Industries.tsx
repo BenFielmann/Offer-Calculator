@@ -1,50 +1,35 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
+import useIndustries from '../../hooks/useIndustries';
 import Header from '../../components/Header/Header';
 import Navigation from '../../components/Navigation/Navigation';
 import Cards from '../../components/Cards/Cards';
 import styles from './Industries.module.css';
 
 export default function Industries(): JSX.Element {
+  const { addIndustrie } = useIndustries();
+  const history = useHistory();
   const mockUpData = [
     {
-      tittle: 'Ihr Gewerbe',
-      type: 'chose',
-      goTo: '/',
-    },
-    {
       tittle: 'Elektriker',
-      type: 'chose',
-      goTo: '/profilesettings',
     },
     {
       tittle: 'Fensterbauer',
-      type: 'chose',
-      goTo: '/profilesettings',
     },
     {
       tittle: 'Facility Management',
-      type: 'chose',
-      goTo: '/profilesettings',
     },
     {
       tittle: 'Gas & Wasser',
-      type: 'chose',
-      goTo: '/profilesettings',
     },
     {
       tittle: 'Maler & Lackierer',
-      type: 'chose',
-      goTo: '/profilesettings',
     },
     {
       tittle: 'Maurer',
-      type: 'chose',
-      goTo: '/profilesettings',
     },
     {
       tittle: 'Tischler',
-      type: 'chose',
-      goTo: '/profilesettings',
     },
   ];
 
@@ -52,12 +37,15 @@ export default function Industries(): JSX.Element {
     <div className={styles.container}>
       <Header name="BRANCHEN" />
       <main className={styles.cardWrapper}>
-        {mockUpData.map((card) => (
+        {mockUpData.map((card, index) => (
           <Cards
-            onClick={() => console.log('hey')}
+            onClick={() => {
+              addIndustrie(card.tittle);
+              history.push('/profilesettings');
+            }}
             name={card.tittle}
-            type={card.type}
-            goTo={card.goTo}
+            type="chose"
+            key={index}
           />
         ))}
       </main>

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import useDetails from '../../hooks/useDetails';
 import Header from '../../components/Header/Header';
 import Navigation from '../../components/Navigation/Navigation';
 import Textarea from '../../components/Textarea/Textarea';
@@ -17,11 +19,32 @@ export default function CompanyDetails(): JSX.Element {
   const [managerValue, setManagerValue] = useState('');
   const [managerPhoneValue, setManagerPhoneValue] = useState('');
 
+  const { addDetails } = useDetails();
+  const history = useHistory();
+
+  function handleSubmit(event: React.FormEvent) {
+    event.preventDefault();
+    addDetails({
+      companyValue: companyValue,
+      ceoValue: ceoValue,
+      phoneNumberValue: phoneNumberValue,
+      mobileValue: mobileValue,
+      emailValue: emailValue,
+      urlValue: urlValue,
+      streetValue: streetValue,
+      plzValue: plzValue,
+      cityValue: cityValue,
+      managerValue: managerValue,
+      managerPhoneValue: managerPhoneValue,
+    });
+    history.push('/profilesettings');
+  }
+
   return (
     <div className={styles.container}>
       <Header name="FIRMEN DETAILS" />
       <main className={styles.cardWrapper}>
-        <form>
+        <form onSubmit={(event) => handleSubmit(event)}>
           <Textarea
             isEditable={true}
             setIsEditable={console.log}
