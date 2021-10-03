@@ -13,17 +13,17 @@ export default function ProfileOverview(): JSX.Element {
           isEditable={false}
           setIsEditable={console.log}
           onDeleteClick={console.log}
-          companyValue="Muster Firma"
-          ceoValue="Muster Mann"
-          phoneNumberValue="0...."
-          mobileValue="0...."
-          emailValue="Muster@mail.de"
-          urlValue="www.Muster.de"
-          streetValue="Muster Straße"
-          plzValue="0...."
-          cityValue="Muster Stadt"
-          managerValue="Muster Frau"
-          managerPhoneValue="0...."
+          companyValue="Web GmbH"
+          ceoValue="Benjamin Fielmann"
+          phoneNumberValue="040 000000"
+          mobileValue="01700000000"
+          emailValue="Ben@gmx.de"
+          urlValue="www.Ben.de"
+          streetValue="Web Straße"
+          plzValue="00000"
+          cityValue="Hamburg"
+          managerValue="Assistent"
+          managerPhoneValue="01700000000"
         />
       </main>
       <Navigation
@@ -31,7 +31,7 @@ export default function ProfileOverview(): JSX.Element {
         isFirstStep={false}
         isHomeActive={false}
         goBack={'/profilesetting'}
-        goForward={''}
+        goForward={'/'}
       />
     </div>
   );
