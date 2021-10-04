@@ -33,12 +33,14 @@ export default function CompanyOverview(): JSX.Element {
           cityValue="Muster Stadt"
           managerValue="Muster Frau"
           managerPhoneValue="0...."
+          priceValue={'32,50'}
         />
         {mockUpData.map((card) => (
           <Cards
             onClick={() => console.log('hey')}
             name={card.tittle}
             type={card.type}
+            goTo={''}
           />
         ))}
       </main>
