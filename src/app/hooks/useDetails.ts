@@ -10,6 +10,7 @@ type details = {
   streetValue: string;
   plzValue: string;
   cityValue: string;
+  priceValue: string;
   managerValue: string;
   managerPhoneValue: string;
 };
@@ -25,6 +26,7 @@ export default function useDetails(): {
     streetValue: string;
     plzValue: string;
     cityValue: string;
+    priceValue: string;
     managerValue: string;
     managerPhoneValue: string;
   };
@@ -40,6 +42,7 @@ export default function useDetails(): {
     streetValue: '0',
     plzValue: '0',
     cityValue: '0',
+    priceValue: '0',
     managerValue: '0',
     managerPhoneValue: '0',
   });

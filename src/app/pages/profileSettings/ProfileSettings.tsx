@@ -1,7 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import useIndustries from '../../hooks/useIndustries';
-import useCalculator from '../../hooks/useCalculator';
 import useDetails from '../../hooks/useDetails';
 import Header from '../../components/Header/Header';
 import Navigation from '../../components/Navigation/Navigation';
@@ -10,7 +9,6 @@ import styles from './ProfileSettings.module.css';
 
 export default function ProfileSettings(): JSX.Element {
   const { industries } = useIndustries();
-  const { calculator } = useCalculator();
   const { details } = useDetails();
   const history = useHistory();
   return (
@@ -24,21 +22,18 @@ export default function ProfileSettings(): JSX.Element {
               name={card}
               type="checked"
               key={index}
+              goTo={''}
             />
           ))}
         <Cards
           onClick={() => history.push('/companydetails')}
           name="Firma"
           type={details && details.companyValue !== '0' ? 'checked' : 'asking'}
-        />
-        <Cards
-          onClick={() => history.push('/calculate')}
-          name="Stundensatz"
-          type={calculator && calculator !== '0' ? 'checked' : 'asking'}
+          goTo={'/companydetails'}
         />
       </main>
       <Navigation
-        callToAction={false}
+        callToAction={true}
         isFirstStep={false}
         isHomeActive={false}
         goBack={'/industries'}

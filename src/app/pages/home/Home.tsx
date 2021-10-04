@@ -12,10 +12,12 @@ export default function Home(): JSX.Element {
     {
       tittle: 'BRANCHEN PROFILE',
       type: 'chose',
+      goTo: '/industries',
     },
     {
       tittle: 'NEUES OBJEKT',
       type: 'chose',
+      goTo: '/newobject',
     },
   ];
 
@@ -25,10 +27,11 @@ export default function Home(): JSX.Element {
       <main className={styles.cardWrapper}>
         {mockUpData.map((card, index) => (
           <Cards
-            onClick={() => history.push('/industries')}
+            onClick={() => history.push('')}
             name={card.tittle}
             type={card.type}
             key={index}
+            goTo={card.goTo}
           />
         ))}
       </main>

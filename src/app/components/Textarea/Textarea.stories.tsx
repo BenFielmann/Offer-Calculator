@@ -34,6 +34,8 @@ export const EditableTextArea = (): JSX.Element => (
     setPlzValue={console.log}
     cityValue=""
     setCityValue={console.log}
+    priceValue=""
+    setPriceValue={console.log}
     managerValue=""
     setManagerValue={console.log}
     managerPhoneValue=""
@@ -54,6 +56,7 @@ export const TextArea = (): JSX.Element => (
     streetValue="Muster Straße"
     plzValue="0...."
     cityValue="Muster Stadt"
+    priceValue="32,50€"
     managerValue="Muster Frau"
     managerPhoneValue="0...."
   />

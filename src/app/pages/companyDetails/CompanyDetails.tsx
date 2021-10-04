@@ -16,6 +16,7 @@ export default function CompanyDetails(): JSX.Element {
   const [streetValue, setStreetValue] = useState('');
   const [plzValue, setPlzValue] = useState('');
   const [cityValue, setCityValue] = useState('');
+  const [priceValue, setPriceValue] = useState('');
   const [managerValue, setManagerValue] = useState('');
   const [managerPhoneValue, setManagerPhoneValue] = useState('');
 
@@ -34,10 +35,11 @@ export default function CompanyDetails(): JSX.Element {
       streetValue: streetValue,
       plzValue: plzValue,
       cityValue: cityValue,
+      priceValue: priceValue,
       managerValue: managerValue,
       managerPhoneValue: managerPhoneValue,
     });
-    history.push('/profilesettings');
+    history.push('/companyoverview');
   }
 
   return (
@@ -67,6 +69,8 @@ export default function CompanyDetails(): JSX.Element {
             setPlzValue={setPlzValue}
             cityValue={cityValue}
             setCityValue={setCityValue}
+            priceValue={priceValue}
+            setPriceValue={setPriceValue}
             managerValue={managerValue}
             setManagerValue={setManagerValue}
             managerPhoneValue={managerPhoneValue}
@@ -75,7 +79,7 @@ export default function CompanyDetails(): JSX.Element {
         </form>
       </main>
       <Navigation
-        callToAction={true}
+        callToAction={false}
         isFirstStep={false}
         isHomeActive={false}
         goBack={'/profilesettings'}

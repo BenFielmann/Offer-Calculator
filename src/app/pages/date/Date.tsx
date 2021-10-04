@@ -12,11 +12,11 @@ export default function Date(): JSX.Element {
         <Calendar />
       </main>
       <Navigation
-        callToAction={false}
+        callToAction={true}
         isFirstStep={false}
         isHomeActive={false}
         goBack={'/profilesetting'}
-        goForward={''}
+        goForward={'/newobject'}
       />
     </div>
   );

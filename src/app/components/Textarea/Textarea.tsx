@@ -24,6 +24,8 @@ export type TextareaProps = {
   setPlzValue?: (value: string) => void;
   cityValue: string;
   setCityValue?: (value: string) => void;
+  priceValue: string;
+  setPriceValue?: (value: string) => void;
   managerValue: string;
   setManagerValue?: (value: string) => void;
   managerPhoneValue: string;
@@ -52,6 +54,8 @@ export default function Textarea({
   setPlzValue,
   cityValue,
   setCityValue,
+  priceValue,
+  setPriceValue,
   managerValue,
   setManagerValue,
   managerPhoneValue,
@@ -69,6 +73,7 @@ export default function Textarea({
       setStreetValue &&
       setPlzValue &&
       setCityValue &&
+      setPriceValue &&
       setManagerValue &&
       setManagerPhoneValue ? (
         <>
@@ -149,6 +154,13 @@ export default function Textarea({
             type="number"
             className={styles.textInput}
           />
+          <input
+            value={priceValue}
+            onChange={(event) => setPriceValue(event.target.value)}
+            placeholder="Stundenlohn:"
+            type="text"
+            className={styles.textInput}
+          />
           <Button
             className={styles.submitButton}
             type="submit"
@@ -168,6 +180,7 @@ export default function Textarea({
           <p className={styles.InputOutput}>Stadt: {cityValue}</p>
           <p className={styles.InputOutput}>Ansprechpartner: {managerValue}</p>
           <p className={styles.InputOutput}>Tel: {managerPhoneValue}</p>
+          <p className={styles.InputOutput}>Stundenlohn: {priceValue}</p>
           <div className={styles.buttongroup}>
             <Button type="edit" onClick={() => setIsEditable(true)} />
             {!isEditable && <Button type="delete" onClick={onDeleteClick} />}
