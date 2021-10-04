@@ -39,7 +39,7 @@ export default function CustomerDetails(): JSX.Element {
       managerValue: managerValue,
       managerPhoneValue: managerPhoneValue,
     });
-    history.push('/newobject');
+    history.push('/customeroverview');
   }
 
   return (
@@ -83,7 +83,7 @@ export default function CustomerDetails(): JSX.Element {
         isFirstStep={false}
         isHomeActive={false}
         goBack={'/newobject'}
-        goForward={'/'}
+        goForward={'/customeroverview'}
       />
     </div>
   );
