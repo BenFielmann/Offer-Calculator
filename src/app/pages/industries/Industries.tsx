@@ -46,6 +46,7 @@ export default function Industries(): JSX.Element {
             name={card.tittle}
             type="chose"
             key={index}
+            goTo={'/profilesettings'}
           />
         ))}
       </main>
